@@ -44,15 +44,12 @@ entries:
         url: "minds-hall-of-fame"
 
 
-  - title: "📓 Journal: personal updates and insights"
-    post_list_2:
-      limit: 3
-      show_more: true
-      show_more_text: "See more posts..."
-      show_more_url: "archive.html"
-
-
-
+  # - title: "📓 Journal: personal updates and insights"
+  #   post_list_2:
+  #     limit: 3
+  #     show_more: true
+  #     show_more_text: "See more posts..."
+  #     show_more_url: "archive.html"
 
   - title: "🔗 Socials:"
     entries:
