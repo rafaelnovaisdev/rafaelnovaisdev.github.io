@@ -9,7 +9,7 @@ With all the talk about AI replacing humans, I want to try out current state-of-
 
 **Web development was never my thing, but I always wanted a website, so I decided to build one.** 
 
-Over the next 3–5 days, my plan is to use AI to build a personal website with:
+Over the next 3–4 days, my plan is to use AI to build a personal website with:
 - A useful links and bookmarks section.
 - A portfolio.
 - A blog.
@@ -19,21 +19,24 @@ Over the next 3–5 days, my plan is to use AI to build a personal website with:
 
 ## **Checklist**
 
-- [ ] **Have an MVP**:  
+- [X] **Have an MVP**:  
   - Set up Jekyll with a basic theme.  
   - Use GitHub Pages for hosting.  
   - Get a DNS name linked to the site.  
 
-- [ ] **Portfolio**:  
+- [X] **Portfolio**:  
   - Create a dedicated section for showcasing my projects.  
   - Add placeholders for future projects.  
 
-- [ ] **Blog**:  
+- [X] **Blog**:  
   - Add a blog section with a view counter for posts.  
   - Write an initial post (this one).  
 
-- [ ] **Useful Links and Bookmarks**:  
+- [X] **Useful Links and Bookmarks**:  
   - Add a section for curated links and resources.  
+
+- [ ] **CV section**:  
+  - Add a section for curriculum vitae and fill it with information.  
 
 ---
 
@@ -68,29 +71,15 @@ Over the next 3–5 days, my plan is to use AI to build a personal website with:
 - **Content Structure**:  
   - Organized blog, portfolio, and cv sections.
 
+- **Add Content**:  
+  - Organized content of cv.
+
+
 ---
 
 ## **Reflection**
 
-<!-- Once the website is live, I'll evaluate the entire process:
-- **AI Tools**: How effective were Cursor IDE and ChatGPT in streamlining development?  
-- **Challenges**: What issues did I face, and how did I solve them?  
-- **Takeaways**: Lessons learned about web development, hosting, and using AI-powered tools. -->
-
----
-
-## **Closing**
-
-<!-- This is a small but important step towards building something tangible and personal. The process itself will help me learn, grow, and refine my skills.  
-
-If you're thinking about starting a project like this, my advice is simple: **just begin.** You'll figure out the rest along the way.
-
-Let's see what the next 3–5 days bring. 🚀 -->
-
-
-## **Next Ideas**
-
--It occured me, when writing blog post, to have "ChatGPT" as a tag. and link that to my skills. I could do that for all the tags, Cursor IDE, etc etc web development, etc etc... 
-I can even create a script that crawls to my website and identifies  tags that I should have or need to make a page off. 
-
-- also, have same thing but for quotes. So, have quotes associanted to a person and refer to them, like a tag, in each blog post or project.
+- AI tools can be a mixed bag when working on projects like this: 
+- They're awesome at generating code and, with the right context and queries, can really boost productivity.
+- But, they can also be a bit buggy and sometimes make things more complicated than they need to be.
+- Having an experienced engineer around to guide and complement the use of AI tools is super helpful. 

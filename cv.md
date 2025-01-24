@@ -8,6 +8,7 @@ personal_info:
   location: Portugal / WorldWide (Remote)
 
 experience:
+
   - company: Continental Engineering Services
     role: Software Engineer - DevOps
     period: September 2022 - February 2025
@@ -114,7 +115,6 @@ languages:
     level: Full Professional
   - name: Spanish
     level: Limited Working
-
 
 ---
 <!-- The layout will handle all presentation -->
