@@ -5,21 +5,18 @@
 
 
 entries:
-  # Personal Information
-  - title: "Email: <a href='mailto:email@rafaelnovais.dev'>email@rafaelnovais.dev</a>"
+  - title: "🛠️ <a href='tools'>my tools</a>"
 
-  # Blog Section
-  - title: "🚀 Projects:"
-    post_list_2:
+  - title: "🚀 my projects"
+    post_list:
       limit: 3
       show_more: true
       show_more_text: "See more posts..."
-      show_more_url: "archive22.html"
+      show_more_url: "archive.html"
+      category: "project-blog"
 
 
-  # Personal Information
-  - title: "💼 Work:"
-    # entries:
+
     #   # Links Section 
     #   - title: "online curriculum vitae"
     #     url: "certifications"
@@ -38,23 +35,24 @@ entries:
   #       url: "ideas-hall-of-fame"
   
   # Personal Information
-  - title: "🏁 Sim Racing:"
-    entries:
-      - title: "Season 2024"
-        url: "minds-hall-of-fame"
 
 
-  # - title: "📓 Journal: personal updates and insights"
-  #   post_list_2:
-  #     limit: 3
-  #     show_more: true
-  #     show_more_text: "See more posts..."
-  #     show_more_url: "archive.html"
+  - title: "📓 blog:"
+    post_list:
+      limit: 3
+      show_more: true
+      show_more_text: "See more posts..."
+      show_more_url: "archive.html"
+      category: "blog"
 
-  - title: "🔗 Socials:"
-    entries:
-      - title: "LinkedIn: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
-      - title: "Upwork: <a href='https://www.upwork.com/freelancers/~01274a42f86d431a54'>rafanovais</a>"
-      - title: "Freelancer: <a href='https://www.freelancer.com/u/rafanovais'>rafanovais</a>"
-      - title: "GitHub: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
-      - title: "LeetCode: <a href='https://leetcode.com/u/rafael-nov/'>rafael-nov</a>"
+
+
+
+
+
+  # Personal Information
+  - title: "Email: <a href='mailto:me@rafaelnovais.dev'>me@rafaelnovais.dev</a>"
+
+  - title: "Linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
+
+  - title: "GitHub: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
