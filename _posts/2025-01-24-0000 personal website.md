@@ -1,6 +1,6 @@
 ---
 layout: post
-category: project-blog
+category: blog
 ---
 
 ## **Introduction**

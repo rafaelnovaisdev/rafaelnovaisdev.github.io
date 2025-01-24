@@ -7,13 +7,13 @@
 entries:
   - title: "🛠️ <a href='tools'>my tools</a>"
 
-  - title: "🚀 my projects"
-    post_list:
-      limit: 3
-      show_more: true
-      show_more_text: "See more posts..."
-      show_more_url: "archive.html"
-      category: "project-blog"
+  # - title: "🚀 my projects"
+  #   post_list:
+  #     limit: 3
+  #     show_more: true
+  #     show_more_text: "See more posts..."
+  #     show_more_url: "archive.html"
+  #     category: "project-blog"
 
 
 
@@ -46,13 +46,9 @@ entries:
       category: "blog"
 
 
-
-
-
-
-  # Personal Information
-  - title: "Email: <a href='mailto:me@rafaelnovais.dev'>me@rafaelnovais.dev</a>"
-
-  - title: "Linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
-
-  - title: "GitHub: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
+  # Links Section
+  - title: "📞 my contacts & socials"
+    entries:
+      - title: "Email: <a href='mailto:me@rafaelnovais.dev'>me@rafaelnovais.dev</a>"
+      - title: "Linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
+      - title: "GitHub: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
