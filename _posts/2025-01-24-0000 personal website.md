@@ -40,32 +40,39 @@ Over the next 3–5 days, my plan is to use AI to build a personal website with:
 ## **Execution Plan**
 
 ### **Day 0-2: Initial Setup**
-- **Choosing the Tech Stack**:  
-  - I decided to use GitHub Pages and Jekyll, leveraging my previous experience with them for hosting and site generation.
 
-- **Finding a Theme**:  
-  - I found a simple and clean theme called *no-style-please*, which fit perfectly with the vision I had for the website.
+- **Hosting and Site Generation**:  
+  - Used GitHub Pages and Jekyll.
 
-- **Setting Up the Repository**:  
-  - Used an existing repository to kickstart the project.  
-  - Integrated Jekyll with the chosen theme for seamless development.
+- **Theme Selection**:  
+  - Chose the [*no-style-please*](https://riggraz.dev/no-style-please/) theme.
 
-- **Configuring the Site**:  
-  - Organized and configured the menu items to ensure clear navigation.  
-  - Set up the DNS name to make the site accessible through a custom domain.
+- **Repository Setup**:  
+  - Started with an existing repository.  
+  - Integrated Jekyll with the theme.
 
-- **Deploying the Website**:  
-  - Deployed the live version of the website using GitHub Pages.  
+- **Site Configuration**:  
+  - Configured menu items.  
+  - Linked a custom domain.
+
+- **Deployment**:  
+  - Deployed using GitHub Pages.
+
+---
 
 ### **Day 3-4: Content**
 
+- **Links Page**:  
+  - Added a page for useful links.
 
+- **Content Structure**:  
+  - Organized blog, portfolio, and cv sections.
 
 ---
 
 ## **Reflection**
 
-<!-- Once the website is live, I’ll evaluate the entire process:
+<!-- Once the website is live, I'll evaluate the entire process:
 - **AI Tools**: How effective were Cursor IDE and ChatGPT in streamlining development?  
 - **Challenges**: What issues did I face, and how did I solve them?  
 - **Takeaways**: Lessons learned about web development, hosting, and using AI-powered tools. -->
@@ -76,9 +83,9 @@ Over the next 3–5 days, my plan is to use AI to build a personal website with:
 
 <!-- This is a small but important step towards building something tangible and personal. The process itself will help me learn, grow, and refine my skills.  
 
-If you’re thinking about starting a project like this, my advice is simple: **just begin.** You’ll figure out the rest along the way.
+If you're thinking about starting a project like this, my advice is simple: **just begin.** You'll figure out the rest along the way.
 
-Let’s see what the next 3–5 days bring. 🚀 -->
+Let's see what the next 3–5 days bring. 🚀 -->
 
 
 ## **Next Ideas**

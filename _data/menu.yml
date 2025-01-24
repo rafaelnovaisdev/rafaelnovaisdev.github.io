@@ -5,9 +5,18 @@
 
 
 entries:
-  - title: "🛠️ <a href='tools'>TOOLS</a>"
 
-  - title: "📓 BLOG"
+  - title: "💼 <a href='cv'>cv</a>"
+  
+  - title: "🛠️ <a href='tools'>tools & links</a>"
+
+  - title: "🚀 projects"
+    entries:
+      - title: "..."
+    #   - title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
+    #   - title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
+
+  - title: "📓 blog"
     post_list:
       limit: 3
       show_more: true
@@ -15,16 +24,13 @@ entries:
       show_more_url: "archive.html"
       category: "blog"
 
-  - title: "🚀 PROJECTS"
-    entries:
-      - title: "..."
-     #  - title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
-     # - title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
+
 
   # Links Section
-  - title: "📞 CONTACTS"
+  - title: "📞 contacts"
     entries:
-      - title: "Email: <a href='mailto:me@rafaelnovais.dev'>me@rafaelnovais.dev</a>"
+
+      - title: "Email: <a href='mailto:email@rafaelnovais.dev'>email@rafaelnovais.dev</a>"
       - title: "Linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
       - title: "GitHub: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
 
