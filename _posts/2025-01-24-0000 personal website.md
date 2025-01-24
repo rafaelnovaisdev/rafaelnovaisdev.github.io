@@ -57,7 +57,9 @@ Over the next 3–5 days, my plan is to use AI to build a personal website with:
 - **Deploying the Website**:  
   - Deployed the live version of the website using GitHub Pages.  
 
-### **Day x: xxx**
+### **Day 3-4: Content**
+
+
 
 ---
 
@@ -84,3 +86,4 @@ Let’s see what the next 3–5 days bring. 🚀 -->
 -It occured me, when writing blog post, to have "ChatGPT" as a tag. and link that to my skills. I could do that for all the tags, Cursor IDE, etc etc web development, etc etc... 
 I can even create a script that crawls to my website and identifies  tags that I should have or need to make a page off. 
 
+- also, have same thing but for quotes. So, have quotes associanted to a person and refer to them, like a tag, in each blog post or project.

@@ -5,39 +5,9 @@
 
 
 entries:
-  - title: "🛠️ <a href='tools'>my tools</a>"
+  - title: "🛠️ <a href='tools'>TOOLS</a>"
 
-  # - title: "🚀 my projects"
-  #   post_list:
-  #     limit: 3
-  #     show_more: true
-  #     show_more_text: "See more posts..."
-  #     show_more_url: "archive.html"
-  #     category: "project-blog"
-
-
-
-    #   # Links Section 
-    #   - title: "online curriculum vitae"
-    #     url: "certifications"
-
-    #   # Links Section
-    #   - title: "skills & certifications"
-    #     url: "certifications"
-
-
-  # Links Section
-  # - title: "🏆 Hall of Fame: Minds and Ideas" 
-  #   entries:
-  #     - title: "HOF: Minds"
-  #       url: "minds-hall-of-fame"
-  #     - title: "HOF: Ideas"
-  #       url: "ideas-hall-of-fame"
-  
-  # Personal Information
-
-
-  - title: "📓 blog:"
+  - title: "📓 BLOG"
     post_list:
       limit: 3
       show_more: true
@@ -45,10 +15,18 @@ entries:
       show_more_url: "archive.html"
       category: "blog"
 
+  - title: "🚀 PROJECTS"
+    entries:
+      - title: "..."
+     #  - title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
+     # - title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
 
   # Links Section
-  - title: "📞 my contacts & socials"
+  - title: "📞 CONTACTS"
     entries:
       - title: "Email: <a href='mailto:me@rafaelnovais.dev'>me@rafaelnovais.dev</a>"
       - title: "Linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
       - title: "GitHub: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
+
+
+
