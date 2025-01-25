@@ -6,6 +6,10 @@ layout: tools
 
 - [ChatGPT](https://chatgpt.com/): A chatbot that can answer questions and help with tasks.
 
+## Email
+
+- [MailTester](https://www.mail-tester.com/)
+- 
 ## GitHub
 
 - [GitHub Community](https://github.com/community): A community for discussing GitHub and its features.
