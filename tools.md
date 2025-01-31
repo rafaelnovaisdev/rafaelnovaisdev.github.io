@@ -7,6 +7,10 @@ layout: tools
 - [ChatGPT](https://chatgpt.com/)
 - [GitHub Docs](https://docs.github.com/en)
 
+## Email
+
+- [MailTester](https://www.mail-tester.com/)
+- 
 ## GitHub
 
 - [GitHub Community](https://github.com/community)
