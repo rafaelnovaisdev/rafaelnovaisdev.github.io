@@ -5,56 +5,31 @@
 
 
 entries:
-  # Personal Information
-  - title: "Email: <a href='mailto:email@rafaelnovais.dev'>email@rafaelnovais.dev</a>"
+  - title: "🛠️ <a href='tools'>tools & links</a>"
 
-  # Blog Section
-  - title: "🚀 Projects:"
-    post_list_2:
+  - title: "🚀 projects"
+    entries:
+      - title: "..."
+    #   - title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
+    #   - title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
+
+  - title: "📓 blog"
+    post_list:
       limit: 3
       show_more: true
       show_more_text: "See more posts..."
-      show_more_url: "archive22.html"
+      show_more_url: "archive.html"
+      category: "blog"
 
-
-  # Personal Information
-  - title: "💼 Work:"
-    # entries:
-    #   # Links Section 
-    #   - title: "online curriculum vitae"
-    #     url: "certifications"
-
-    #   # Links Section
-    #   - title: "skills & certifications"
-    #     url: "certifications"
 
 
   # Links Section
-  # - title: "🏆 Hall of Fame: Minds and Ideas" 
-  #   entries:
-  #     - title: "HOF: Minds"
-  #       url: "minds-hall-of-fame"
-  #     - title: "HOF: Ideas"
-  #       url: "ideas-hall-of-fame"
-  
-  # Personal Information
-  - title: "🏁 Sim Racing:"
+  - title: "📞 contacts"
     entries:
-      - title: "Season 2024"
-        url: "minds-hall-of-fame"
+
+      - title: "<a href='mailto:rafa@rafaelnovais.dev'>rafa@rafaelnovais.dev</a>"
+      - title: "linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
+      - title: "github: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
 
 
-  # - title: "📓 Journal: personal updates and insights"
-  #   post_list_2:
-  #     limit: 3
-  #     show_more: true
-  #     show_more_text: "See more posts..."
-  #     show_more_url: "archive.html"
 
-  - title: "🔗 Socials:"
-    entries:
-      - title: "LinkedIn: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
-      - title: "Upwork: <a href='https://www.upwork.com/freelancers/~01274a42f86d431a54'>rafanovais</a>"
-      - title: "Freelancer: <a href='https://www.freelancer.com/u/rafanovais'>rafanovais</a>"
-      - title: "GitHub: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
-      - title: "LeetCode: <a href='https://leetcode.com/u/rafael-nov/'>rafael-nov</a>"

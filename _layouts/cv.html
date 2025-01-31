@@ -1,0 +1,461 @@
+---
+layout: default
+---
+
+{%-include back_link.html-%}
+
+<div class="cv-container">
+
+<!-- Personal Information Section -->
+<div class="personal-info">
+  <h1>{{ page.personal_info.name }}</h1>
+  <h2>{{ page.personal_info.role }}</h2>
+  <p>{{ page.personal_info.location }}</p>
+  <br>
+  <p><a href="mailto:{{ page.personal_info.email }}" target="_blank">{{ page.personal_info.email }}</a></p>
+</div>
+
+<!-- Introduction Section -->
+<div class="introduction" onclick="toggleSection('introduction-content', event)">
+  <h2>
+    <button class="toggle-button">+</button>
+    👋 Hello
+  </h2>
+  <div id="introduction-content" class="section-content">
+    <p>{{ page.introduction }}</p>
+  </div>
+</div>
+
+
+<!-- Skills Section -->
+<h2 onclick="toggleSection('skills-content', event)">
+  <button class="toggle-button">+</button>
+  💻 Skills
+</h2>
+<div id="skills-content" class="section-content">
+  <div class="skills-container">
+    <div id="mini-ranking-content">
+      <table style="width: 100%; font-size: small; border-collapse: collapse;">
+        <tr>
+          <td><span class="dot filled-1"></span></td>
+          <td><strong>1 - Novice:</strong> Basic understanding and limited experience.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-2"></span></td>
+          <td><strong>2 - Beginner:</strong> Some experience and can perform tasks with guidance.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-3"></span></td>
+          <td><strong>3 - Competent:</strong> Good working knowledge and can perform tasks independently.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-4"></span></td>
+          <td><strong>4 - Proficient:</strong> Strong understanding and can mentor others.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-5"></span></td>
+          <td><strong>5 - Expert:</strong> Deep expertise and recognized authority in the field.</td>
+        </tr>
+      </table>
+    </div>
+    <h3>Programming Languages</h3>
+    {% for skill in page.skills %}
+      {% if skill.name == "Python" or skill.name == "C (Programming Language)" or skill.name == "SQL" or skill.name == "Java" or skill.name == "Prolog" %}
+        <div class="skill-item" onclick="toggleDescription(this)">
+          <div class="skill-header">
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level" data-level="{{ skill.level }}"></div>
+          </div>
+          <div class="skill-description" style="display: none;">
+            {{ skill.description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <h3>Tools & Technologies</h3>
+    {% for skill in page.skills %}
+      {% if skill.name == "Linux" or skill.name == "Ubuntu" or skill.name == "Git" or skill.name == "Bash" or skill.name == "Kubernetes" or skill.name == "Docker Products" or skill.name == "Jenkins" or skill.name == "Amazon Web Services (AWS)" or skill.name == "Google Cloud Platform (GCP)" or skill.name == "Prometheus.io" or skill.name == "Grafana" or skill.name == "Domain Name System (DNS)" or skill.name == "Windows" %}
+        <div class="skill-item" onclick="toggleDescription(this)">
+          <div class="skill-header">
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level" data-level="{{ skill.level }}"></div>
+          </div>
+          <div class="skill-description" style="display: none;">
+            {{ skill.description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <h3>Methodologies</h3>
+    {% for skill in page.skills %}
+      {% if skill.name == "Continuous Integration and Continuous Delivery (CI/CD)" or skill.name == "DevOps" or skill.name == "Programming" or skill.name == "Test Automation" or skill.name == "Software Development" or skill.name == "Site Reliability Engineering" or skill.name == "Networking" or skill.name == "Scripting" %}
+        <div class="skill-item" onclick="toggleDescription(this)">
+          <div class="skill-header">
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level" data-level="{{ skill.level }}"></div>
+          </div>
+          <div class="skill-description" style="display: none;">
+            {{ skill.description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <h3>Network</h3>
+    {% for skill in page.skills %}
+      {% if skill.name == "TCP/IP" or skill.name == "DNS" or skill.name == "HTTP/HTTPS" or skill.name == "Network Security" %}
+        <div class="skill-item" onclick="toggleDescription(this)">
+          <div class="skill-header">
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level" data-level="{{ skill.level }}"></div>
+          </div>
+          <div class="skill-description" style="display: none;">
+            {{ skill.description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<h2 onclick="toggleSection('career-content', event)">
+  <button class="toggle-button">+</button>
+  💼 Career
+</h2>
+<div id="career-content" class="section-content">
+  {% for job in page.experience %}
+    <div class="job">
+      
+      <h4>{{ job.role }} @ {{ job.company }}</h4>
+      <ul class="job-responsibilities">
+        {% for responsibility in job.responsibilities %}
+          <li>{{ responsibility }}</li>
+        {% endfor %}
+      </ul>
+
+      <h5>({{ job.period }}) ({{ job.duration }})</h5>
+    </div>
+  {% endfor %}
+</div>
+
+
+<h2 onclick="toggleSection('education-content', event)">
+  <button class="toggle-button">+</button>
+  🎓 Education
+</h2>  
+<!-- Education Section -->
+<div id="education-content" class="section-content">
+{% for edu in page.education %}
+<div class="timeline-item">
+    <h4>{{ edu.degree }}</h4>
+    <p>{{ edu.school }}</p>
+    <div class="timeline-date">{{ edu.period }}</div>
+    <div class="timeline-content">
+
+    <ul>
+        {% for detail in edu.details %}
+        <li>{{ detail }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+
+
+
+
+<!-- Languages Section -->
+<h2 onclick="toggleSection('languages-content', event)">
+  <button class="toggle-button">+</button>
+  🌐 Languages
+</h2>
+<div id="languages-content" class="section-content">
+  <div class="languages-container">
+    {% for language in page.languages %}
+      <div class="language-item">
+        <div class="language-name">{{ language.name }}</div>
+        <div class="language-level">{{ language.level }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+</div>
+
+<style>
+  .cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Personal Information styling */
+  .personal-info {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .personal-info h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .personal-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #666;
+  }
+
+  .personal-info p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #999;
+  }
+
+  /* Timeline styling */
+  .timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 2px solid #ccc;
+  }
+
+  .timeline-date {
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .timeline-content {
+    margin-left: 10px;
+  }
+
+  /* Skills styling */
+  .skills-container {
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .skill-name {
+    font-weight: bold;
+    flex-grow: 1;
+  }
+
+  .skill-level {
+    display: flex;
+    gap: 5px;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    margin-left: 5px;
+  }
+
+  .dot.filled-1 {
+    background: hsl(25, 100%, 50%);
+  }
+
+  .dot.filled-2 {
+    background: #FFD700;
+  }
+
+  .dot.filled-3 {
+    background: #32CD32;
+  }
+
+  .dot.filled-4 {
+    background: #1E90FF;
+  }
+
+  .dot.filled-5 {
+    background: #4c00ff;
+  }
+
+  .skill-description {
+    margin-top: 5px;
+    display: none;
+    width: 100%;
+  }
+
+  /* Languages styling */
+  .languages-container {
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .language-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+  }
+
+  .language-level {
+    color: #666;
+    font-style: italic;
+  }
+
+  /* Network styling */
+  .network-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .network-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 5px;
+  }
+
+  .skill-bracket {
+    font-style: italic;
+    display: none;
+    font-size: 0.8em;
+    margin-right: 5px;
+  }
+
+  .skill-item.active .skill-bracket {
+    display: inline;
+  }
+
+  .toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .section-content {
+    display: none;
+  }
+
+  /* Job and Education styling similar to Skills */
+  .job, .timeline-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #f5f5f5; /* Match the background color of skill items */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .job h4, .timeline-item h4 {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .job h5, .timeline-date {
+    color: #666;
+    font-style: italic;
+    margin: 5px 0;
+  }
+
+  .job-responsibilities, .timeline-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+
+  .job-responsibilities li, .timeline-content li {
+    margin-bottom: 5px;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Define skill bracket names
+  const skillBrackets = [
+    "Novice",
+    "Beginner",
+    "Competent",
+    "Proficient",
+    "Expert"
+  ];
+
+  // Generate skill level indicators
+  document.querySelectorAll('.skill-level').forEach(function(skill) {
+    const level = parseInt(skill.dataset.level);
+    skill.innerHTML = '';
+    // Append the skill bracket name before the dots
+    const bracketName = document.createElement('span');
+    bracketName.className = 'skill-bracket';
+    bracketName.textContent = `${skillBrackets[level - 1]} `;
+    skill.appendChild(bracketName);
+
+    for (let i = 0; i < 5; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'dot' + (i < level ? ' filled-' + (i + 1) : '');
+      skill.appendChild(dot);
+    }
+  });
+
+  // Function to toggle skill description visibility
+  window.toggleDescription = function(skillElement) {
+    const description = skillElement.querySelector('.skill-description');
+    if (description) {
+      const isActive = skillElement.classList.toggle('active'); // Toggle active class
+      description.style.display = isActive ? 'block' : 'none'; // Toggle description visibility
+    }
+  };
+
+  // Set cursor pointer and onclick event only if description exists
+  document.querySelectorAll('.skill-item').forEach(function(skillElement) {
+    const description = skillElement.querySelector('.skill-description');
+    if (description && description.textContent.trim()) {
+      skillElement.style.cursor = 'pointer'; // Set pointer cursor
+      skillElement.onclick = function() {
+        toggleDescription(skillElement);
+      };
+    } else {
+      skillElement.style.cursor = 'default'; // No pointer if no description
+      skillElement.onclick = null; // Remove onclick event
+    }
+  });
+});
+
+function toggleSection(sectionId, event) {
+  event.preventDefault(); // Prevent the default button action
+  const section = document.getElementById(sectionId);
+  const button = section.previousElementSibling.querySelector('.toggle-button');
+  if (section.style.display === 'none' || section.style.display === '') {
+    section.style.display = 'block';
+    button.textContent = '-';
+  } else {
+    section.style.display = 'none';
+    button.textContent = '+';
+  }
+}
+
+// Initialize sections to be collapsed
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.section-content').forEach(function(section) {
+    section.style.display = 'none';
+  });
+});
+</script>
