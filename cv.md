@@ -4,8 +4,14 @@ title: Curriculum Vitae
 
 personal_info:
   name: Rafael Novais
-  role: Software / DevOps / SRE
+  role: DevOps Engineer
   location: Portugal / WorldWide (Remote)
+  email: rafa@rafaelnovais.dev
+  phone: (+351) 934 463 751
+  linkedin: https://www.linkedin.com/in/rafael-nov
+
+introduction: >
+  Intermediate Software Engineer with diverse experience across various software domains and industries,
 
 experience:
 
@@ -13,23 +19,29 @@ experience:
     role: Software Engineer - DevOps
     period: September 2022 - February 2025
     duration: 2 years 5 months
+    responsibilities:
+      - Developed and maintained CI/CD pipelines.
+      - Automated infrastructure provisioning using Terraform.
+      - Collaborated with cross-functional teams to improve system reliability.
 
   - company: Accenture Portugal
     role: Software Engineer - Big Data
     period: June 2021 - March 2022
     duration: 10 months
+    responsibilities:
+      - Designed and implemented data processing solutions.
+      - Optimized data storage and retrieval processes.
+      - Worked with large-scale distributed systems.
 
   - company: Euronext
     role: Service Operations Analyst
     period: September 2019 - March 2020
     duration: 7 months
     location: Porto e Região, Portugal
-
-  - company: Sonae MC
-    role: Supermarket Assistant
-    period: July 2017 - September 2018
-    duration: 1 year 3 months
-    location: Esposende
+    responsibilities:
+      - Monitored and managed IT service operations.
+      - Analyzed and resolved technical issues.
+      - Provided support for network and server infrastructure.
 
 education:
 

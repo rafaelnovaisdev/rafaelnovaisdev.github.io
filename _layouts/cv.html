@@ -11,27 +11,139 @@ layout: default
   <h1>{{ page.personal_info.name }}</h1>
   <h2>{{ page.personal_info.role }}</h2>
   <p>{{ page.personal_info.location }}</p>
+  <br>
+  <p><a href="mailto:{{ page.personal_info.email }}" target="_blank">{{ page.personal_info.email }}</a></p>
+</div>
+
+<!-- Introduction Section -->
+<div class="introduction" onclick="toggleSection('introduction-content', event)">
+  <h2>
+    <button class="toggle-button">+</button>
+    👋 Hello
+  </h2>
+  <div id="introduction-content" class="section-content">
+    <p>{{ page.introduction }}</p>
+  </div>
 </div>
 
 
-<!-- Professional Experience Section -->
-<h2>Professional Experience</h2>
-{% for job in page.experience %}
-    <div class="timeline-item">
-    <h4>{{ job.role }} @ {{ job.company }}</h4>
-    <div class="timeline-date">{{ job.period }}</div>
-    <div class="timeline-content">
-        <ul>
-        {% for achievement in job.achievements %}
-            <li>{{ achievement }}</li>
-        {% endfor %}
-        </ul>
+<!-- Skills Section -->
+<h2 onclick="toggleSection('skills-content', event)">
+  <button class="toggle-button">+</button>
+  💻 Skills
+</h2>
+<div id="skills-content" class="section-content">
+  <div class="skills-container">
+    <div id="mini-ranking-content">
+      <table style="width: 100%; font-size: small; border-collapse: collapse;">
+        <tr>
+          <td><span class="dot filled-1"></span></td>
+          <td><strong>1 - Novice:</strong> Basic understanding and limited experience.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-2"></span></td>
+          <td><strong>2 - Beginner:</strong> Some experience and can perform tasks with guidance.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-3"></span></td>
+          <td><strong>3 - Competent:</strong> Good working knowledge and can perform tasks independently.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-4"></span></td>
+          <td><strong>4 - Proficient:</strong> Strong understanding and can mentor others.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-5"></span></td>
+          <td><strong>5 - Expert:</strong> Deep expertise and recognized authority in the field.</td>
+        </tr>
+      </table>
     </div>
-    </div>
-{% endfor %}
+    <h3>Programming Languages</h3>
+    {% for skill in page.skills %}
+      {% if skill.name == "Python" or skill.name == "C (Programming Language)" or skill.name == "SQL" or skill.name == "Java" or skill.name == "Prolog" %}
+        <div class="skill-item" onclick="toggleDescription(this)">
+          <div class="skill-header">
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level" data-level="{{ skill.level }}"></div>
+          </div>
+          <div class="skill-description" style="display: none;">
+            {{ skill.description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <h3>Tools & Technologies</h3>
+    {% for skill in page.skills %}
+      {% if skill.name == "Linux" or skill.name == "Ubuntu" or skill.name == "Git" or skill.name == "Bash" or skill.name == "Kubernetes" or skill.name == "Docker Products" or skill.name == "Jenkins" or skill.name == "Amazon Web Services (AWS)" or skill.name == "Google Cloud Platform (GCP)" or skill.name == "Prometheus.io" or skill.name == "Grafana" or skill.name == "Domain Name System (DNS)" or skill.name == "Windows" %}
+        <div class="skill-item" onclick="toggleDescription(this)">
+          <div class="skill-header">
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level" data-level="{{ skill.level }}"></div>
+          </div>
+          <div class="skill-description" style="display: none;">
+            {{ skill.description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <h3>Methodologies</h3>
+    {% for skill in page.skills %}
+      {% if skill.name == "Continuous Integration and Continuous Delivery (CI/CD)" or skill.name == "DevOps" or skill.name == "Programming" or skill.name == "Test Automation" or skill.name == "Software Development" or skill.name == "Site Reliability Engineering" or skill.name == "Networking" or skill.name == "Scripting" %}
+        <div class="skill-item" onclick="toggleDescription(this)">
+          <div class="skill-header">
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level" data-level="{{ skill.level }}"></div>
+          </div>
+          <div class="skill-description" style="display: none;">
+            {{ skill.description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+    <h3>Network</h3>
+    {% for skill in page.skills %}
+      {% if skill.name == "TCP/IP" or skill.name == "DNS" or skill.name == "HTTP/HTTPS" or skill.name == "Network Security" %}
+        <div class="skill-item" onclick="toggleDescription(this)">
+          <div class="skill-header">
+            <div class="skill-name">{{ skill.name }}</div>
+            <div class="skill-level" data-level="{{ skill.level }}"></div>
+          </div>
+          <div class="skill-description" style="display: none;">
+            {{ skill.description }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
 
+<h2 onclick="toggleSection('career-content', event)">
+  <button class="toggle-button">+</button>
+  💼 Career
+</h2>
+<div id="career-content" class="section-content">
+  {% for job in page.experience %}
+    <div class="job">
+      
+      <h4>{{ job.role }} @ {{ job.company }}</h4>
+      <ul class="job-responsibilities">
+        {% for responsibility in job.responsibilities %}
+          <li>{{ responsibility }}</li>
+        {% endfor %}
+      </ul>
+
+      <h5>({{ job.period }}) ({{ job.duration }})</h5>
+    </div>
+  {% endfor %}
+</div>
+
+
+<h2 onclick="toggleSection('education-content', event)">
+  <button class="toggle-button">+</button>
+  🎓 Education
+</h2>  
 <!-- Education Section -->
-<h2>Education</h2>
+<div id="education-content" class="section-content">
 {% for edu in page.education %}
 <div class="timeline-item">
     <h4>{{ edu.degree }}</h4>
@@ -47,86 +159,27 @@ layout: default
     </div>
 </div>
 {% endfor %}
+</div>
+
+
+
+
 
 <!-- Languages Section -->
-<h2>Languages</h2>
-<div class="languages-container">
-{% for language in page.languages %}
-    <div class="language-item">
-    <div class="language-name">{{ language.name }}</div>
-    <div class="language-level">{{ language.level }}</div>
-    </div>
-{% endfor %}
+<h2 onclick="toggleSection('languages-content', event)">
+  <button class="toggle-button">+</button>
+  🌐 Languages
+</h2>
+<div id="languages-content" class="section-content">
+  <div class="languages-container">
+    {% for language in page.languages %}
+      <div class="language-item">
+        <div class="language-name">{{ language.name }}</div>
+        <div class="language-level">{{ language.level }}</div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
-
-<!-- Skills Section -->
-<h2>Skills</h2>
-<div class="skills-container">
-  <h4>Programming Languages</h4>
-  <h4></h4>
-  {% for skill in page.skills %}
-    {% if skill.name == "Python" or skill.name == "C (Programming Language)" or skill.name == "SQL" or skill.name == "Java" or skill.name == "Prolog" %}
-      <div class="skill-item" onclick="toggleDescription(this)">
-        <div class="skill-header">
-          <div class="skill-name">{{ skill.name }}</div>
-          <div class="skill-level" data-level="{{ skill.level }}"></div>
-        </div>
-        <div class="skill-description" style="display: none;">
-          {{ skill.description }}
-        </div>
-      </div>
-    {% endif %}
-  {% endfor %}
-  <h4></h4>
-  <h4>Tools & Technologies</h4>
-  <h4></h4>
-  {% for skill in page.skills %}
-    {% if skill.name == "Linux" or skill.name == "Ubuntu" or skill.name == "Git" or skill.name == "Bash" or skill.name == "Kubernetes" or skill.name == "Docker Products" or skill.name == "Jenkins" or skill.name == "Amazon Web Services (AWS)" or skill.name == "Google Cloud Platform (GCP)" or skill.name == "Prometheus.io" or skill.name == "Grafana" or skill.name == "Domain Name System (DNS)" or skill.name == "Windows" %}
-      <div class="skill-item" onclick="toggleDescription(this)">
-        <div class="skill-header">
-          <div class="skill-name">{{ skill.name }}</div>
-          <div class="skill-level" data-level="{{ skill.level }}"></div>
-        </div>
-        <div class="skill-description" style="display: none;">
-          {{ skill.description }}
-        </div>
-      </div>
-    {% endif %}
-  {% endfor %}
-  <h4></h4>
-  <h4>Methodologies</h4>
-  <h4></h4>
-  {% for skill in page.skills %}
-    {% if skill.name == "Continuous Integration and Continuous Delivery (CI/CD)" or skill.name == "DevOps" or skill.name == "Programming" or skill.name == "Test Automation" or skill.name == "Software Development" or skill.name == "Site Reliability Engineering" or skill.name == "Networking" or skill.name == "Scripting" %}
-      <div class="skill-item" onclick="toggleDescription(this)">
-        <div class="skill-header">
-          <div class="skill-name">{{ skill.name }}</div>
-          <div class="skill-level" data-level="{{ skill.level }}"></div>
-        </div>
-        <div class="skill-description" style="display: none;">
-          {{ skill.description }}
-        </div>
-      </div>
-    {% endif %}
-  {% endfor %}
-  <h3></h3>
-  <h3>Network</h3>
-  <h3></h3>
-  {% for skill in page.skills %}
-    {% if skill.name == "TCP/IP" or skill.name == "DNS" or skill.name == "HTTP/HTTPS" or skill.name == "Network Security" %}
-      <div class="skill-item" onclick="toggleDescription(this)">
-        <div class="skill-header">
-          <div class="skill-name">{{ skill.name }}</div>
-          <div class="skill-level" data-level="{{ skill.level }}"></div>
-        </div>
-        <div class="skill-description" style="display: none;">
-          {{ skill.description }}
-        </div>
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
-
 
 </div>
 
@@ -210,10 +263,12 @@ layout: default
   }
 
   .dot {
+    display: inline-block;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: #ddd;
+    margin-left: 5px;
   }
 
   .dot.filled-1 {
@@ -287,6 +342,49 @@ layout: default
   .skill-item.active .skill-bracket {
     display: inline;
   }
+
+  .toggle-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .section-content {
+    display: none;
+  }
+
+  /* Job and Education styling similar to Skills */
+  .job, .timeline-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #f5f5f5; /* Match the background color of skill items */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .job h4, .timeline-item h4 {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .job h5, .timeline-date {
+    color: #666;
+    font-style: italic;
+    margin: 5px 0;
+  }
+
+  .job-responsibilities, .timeline-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+
+  .job-responsibilities li, .timeline-content li {
+    margin-bottom: 5px;
+  }
 </style>
 
 <script>
@@ -338,6 +436,26 @@ document.addEventListener('DOMContentLoaded', function() {
       skillElement.style.cursor = 'default'; // No pointer if no description
       skillElement.onclick = null; // Remove onclick event
     }
+  });
+});
+
+function toggleSection(sectionId, event) {
+  event.preventDefault(); // Prevent the default button action
+  const section = document.getElementById(sectionId);
+  const button = section.previousElementSibling.querySelector('.toggle-button');
+  if (section.style.display === 'none' || section.style.display === '') {
+    section.style.display = 'block';
+    button.textContent = '-';
+  } else {
+    section.style.display = 'none';
+    button.textContent = '+';
+  }
+}
+
+// Initialize sections to be collapsed
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.section-content').forEach(function(section) {
+    section.style.display = 'none';
   });
 });
 </script>

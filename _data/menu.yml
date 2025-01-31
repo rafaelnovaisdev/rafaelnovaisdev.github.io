@@ -5,9 +5,6 @@
 
 
 entries:
-
-  - title: "💼 <a href='cv'>cv</a>"
-  
   - title: "🛠️ <a href='tools'>tools & links</a>"
 
   - title: "🚀 projects"
@@ -30,9 +27,9 @@ entries:
   - title: "📞 contacts"
     entries:
 
-      - title: "Email: <a href='mailto:email@rafaelnovais.dev'>email@rafaelnovais.dev</a>"
-      - title: "Linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
-      - title: "GitHub: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
+      - title: "<a href='mailto:rafa@rafaelnovais.dev'>rafa@rafaelnovais.dev</a>"
+      - title: "linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
+      - title: "github: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
 
 
 
