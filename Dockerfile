@@ -30,5 +30,5 @@ COPY --chown=jekyll:jekyll . .
 # Expose port 4000
 EXPOSE 4000
 
-# Start Jekyll server
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
+# Use ENTRYPOINT instead of CMD to start the Jekyll server
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
