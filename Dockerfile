@@ -1,5 +1,4 @@
-# Use official Ruby base image
-FROM ruby:3.1-slim AS builder
+FROM ruby:3.1-slim
 
 # Install essential Linux packages
 RUN apt-get update && apt-get install -y \
@@ -11,29 +10,25 @@ RUN apt-get update && apt-get install -y \
 # Set working directory
 WORKDIR /app
 
-# Create a non-root user
-ARG USER_ID=1000
-ARG GROUP_ID=1000
-
-RUN addgroup --gid $GROUP_ID jekyll && \
-    adduser --uid $USER_ID --gid $GROUP_ID --disabled-password --gecos "" jekyll && \
+# Create a non-root user with the same UID/GID as the host user
+RUN addgroup --gid 1000 jekyll && \
+    adduser --uid 1000 --gid 1000 --disabled-password --gecos "" jekyll && \
     chown -R jekyll:jekyll /app
 
 # Switch to non-root user
 USER jekyll
 
-# Copy Gemfile first for caching
+# Copy Gemfile and Gemfile.lock first (for better caching)
 COPY --chown=jekyll:jekyll Gemfile* ./
 
-# Install dependencies
+# Install Jekyll and dependencies
 RUN bundle install
 
 # Copy the rest of the application
 COPY --chown=jekyll:jekyll . .
 
-# Expose port for local development
+# Expose port 4000
 EXPOSE 4000
 
-# Allow override of command in CI/CD
-ENTRYPOINT [ "bundle", "exec", "jekyll" ]
-CMD ["serve", "--host", "0.0.0.0", "--force_polling"]
+# Start Jekyll server
+CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
