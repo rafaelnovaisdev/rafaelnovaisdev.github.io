@@ -23,7 +23,7 @@ jobs:
         run: docker run --rm -v $PWD:/app jekyll-site build
 
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site  # Ensure this matches your Jekyll output directory
 
