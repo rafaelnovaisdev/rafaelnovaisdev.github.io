@@ -1,0 +1,50 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Install Jekyll and Bundler
+        run: gem install jekyll bundler
+
+      - name: Install Dependencies
+        run: bundle install
+
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build
+
+  deploy-test:
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Simulate AWS Deployment
+        run: echo "Deploying site to AWS test environment..."
+
+      - name: Simulate Testing
+        run: echo "Running site tests..."
+
+      - name: Simulate Destroying AWS Test Environment
+        run: echo "Destroying AWS test environment..."
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    needs: deploy-test
+
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
