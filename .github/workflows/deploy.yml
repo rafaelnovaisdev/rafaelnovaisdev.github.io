@@ -8,6 +8,7 @@ on:
     workflows: ["Test Deploy Destroy AWS"]
     types:
       - completed
+  workflow_dispatch:
 
 jobs:
   deploy-production:

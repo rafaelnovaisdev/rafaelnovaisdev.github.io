@@ -1,4 +1,4 @@
-name: Test Deploy Destroy AWS
+name: Test Deploy Destroy to AWS
 
 on:
   push:
