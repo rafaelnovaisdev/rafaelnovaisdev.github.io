@@ -1,0 +1,23 @@
+name: Test Deploy Destroy AWS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Simulate AWS Deployment
+        run: echo "Deploying site to AWS test environment..."
+
+      - name: Simulate Testing
+        run: echo "Running site tests..."
+
+      - name: Simulate Destroying AWS Test Environment
+        run: echo "Destroying AWS test environment..."
