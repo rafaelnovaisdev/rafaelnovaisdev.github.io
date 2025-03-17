@@ -52,6 +52,7 @@ jobs:
         run: docker-compose down
           
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       # 1) Check out the repo so we have all files, including Terraform config, Docker Compose, etc.
