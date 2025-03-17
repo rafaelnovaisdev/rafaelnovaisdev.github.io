@@ -28,8 +28,8 @@ jobs:
 
       - name: Test Website with curl
         run: |
-          # Try for up to 100 attempts, waiting 5 seconds between attempts.
-          for i in {1..100}; do
+          # Try for up to 10 attempts, waiting 5 seconds between attempts.
+          for i in {1..10}; do
             if curl -s -f http://localhost:4000; then
               echo "Site is up!"
               exit 0
@@ -44,7 +44,7 @@ jobs:
       - name: List _site contents
         run: |
           echo "Listing contents of the _site directory:"
-          ls -la _site
+          ls -la 
 
       # With the volume mount in place, the container's build output is written to ./_site
       - name: Upload Artifact
