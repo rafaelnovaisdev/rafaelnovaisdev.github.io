@@ -41,13 +41,22 @@ jobs:
           echo "Site did not become available in time."
           exit 1
 
-      - name: List running containers
+          - name: Clean host _site directory
+          run: |
+            rm -rf _site
+            mkdir _site
+
+      - name: Debug - List running containers
         run: docker ps
+
+      # New step: Fix permissions inside the container so that all files in /app/_site are readable.
+      - name: Fix permissions in container
+        run: docker exec $(docker ps -q --filter "name=site") chmod -R a+r /app/_site
 
       - name: Copy site files from container to host
         run: docker cp $(docker ps -q --filter "name=site"):/app/_site/. ./_site
 
-      - name: List _site contents on host
+      - name: Debug - List _site contents on host
         run: ls -la _site
 
       - name: Upload Artifact
@@ -55,7 +64,7 @@ jobs:
         with:
           name: site
           path: _site
-
+    
       - name: Tear down
         run: docker-compose down
 
