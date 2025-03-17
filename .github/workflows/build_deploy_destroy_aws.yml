@@ -44,10 +44,11 @@ jobs:
 
       # Upload the build artifact before tearing down the containers.
       - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          path: _site  # Ensure this matches your host directory where the container wrote the build
-
+          name: site
+          path: _site
+    
       - name: Tear down
         run: docker-compose down
           
@@ -89,8 +90,10 @@ jobs:
 
       # Missing step where we should deploy my code from to the s3.
       - name: Download Build Artifact
-        uses: actions/download-pages-artifact@v3
-
+        uses: actions/download-artifact@v3
+        with:
+          name: site
+          
       # Deploy the built site to S3
       - name: Deploy Site to S3
         run: aws s3 sync _site s3://rafaelnovaisdev-prod --delete
