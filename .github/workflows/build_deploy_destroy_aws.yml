@@ -48,7 +48,7 @@ jobs:
 
       # With the volume mount in place, the container's build output is written to ./_site
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: _site
