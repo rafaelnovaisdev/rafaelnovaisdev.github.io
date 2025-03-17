@@ -36,3 +36,12 @@ Thumbs.db
 node_modules/
 .tmp
 .temp 
+
+# Terraform specific
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/crash.log
+terraform/.terraformrc
+terraform/terraform.rc
