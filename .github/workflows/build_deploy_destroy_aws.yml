@@ -42,14 +42,14 @@ jobs:
           echo "Site did not become available in time."
           exit 1
 
-      - name: Tear down
-        run: docker-compose down
-
+      # Upload the build artifact before tearing down the containers.
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site  # Ensure this matches your Jekyll output directory
+          path: _site  # Ensure this matches your host directory where the container wrote the build
 
+      - name: Tear down
+        run: docker-compose down
           
   deploy:
     runs-on: ubuntu-latest

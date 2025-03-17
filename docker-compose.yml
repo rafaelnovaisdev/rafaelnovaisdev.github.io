@@ -6,3 +6,5 @@ services:
       - "4000:4000"
     environment:
       - JEKYLL_ENV=production
+    volumes:
+      - ./_site:/srv/jekyll/_site
