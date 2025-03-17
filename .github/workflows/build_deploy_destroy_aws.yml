@@ -15,7 +15,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # If needed:
       - name: Install Docker Compose
         run: |
           sudo apt-get update
@@ -27,7 +26,7 @@ jobs:
       - name: Build and run containers
         run: docker-compose up -d
 
-      - name: Test Website w\ curl
+      - name: Test Website with curl
         run: |
           # Try for up to 10 attempts, waiting 5 seconds between attempts.
           for i in {1..10}; do
@@ -42,26 +41,31 @@ jobs:
           echo "Site did not become available in time."
           exit 1
 
-      # Upload the build artifact before tearing down the containers.
+      - name: Debug: List running containers
+        run: docker ps
+
+      - name: Copy site files from container to host
+        run: docker cp $(docker ps -q --filter "name=site"):/app/_site ./_site
+
+      - name: Debug: List _site contents on host
+        run: ls -la _site
+
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: site
           path: _site
-    
+
       - name: Tear down
         run: docker-compose down
-          
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      # 1) Check out the repo so we have all files, including Terraform config, Docker Compose, etc.
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # 2) Configure AWS credentials (requires AWS credentials in your repo or org's settings)
-      #    Make sure you have AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY stored as GitHub Secrets.
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
@@ -69,38 +73,32 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-central-1   # Europe (Frankfurt) region
 
-      # 3) Set up Terraform so we can run 'terraform' commands in this job
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.11  # Pin a version if you like
 
-      # 4) Initialize your Terraform configuration
       - name: Terraform Init
         run: terraform init
 
-      # 5) Plan your deployment (optional but recommended)
       - name: Terraform Plan
         run: terraform plan
 
-      # 6) Apply your Terraform config to create resources in AWS (test environment)
       - name: Terraform Apply
         run: terraform apply -auto-approve
 
-
-      # Missing step where we should deploy my code from to the s3.
       - name: Download Build Artifact
         uses: actions/download-artifact@v3
         with:
           name: site
-          
-      # Deploy the built site to S3
+
       - name: Deploy Site to S3
         run: aws s3 sync _site s3://rafaelnovaisdev-prod --delete
-        
 
       - name: Wait for specified live time
         run: |
           echo "Keeping infrastructure live for ${{ github.event.inputs.live_time }} seconds..."
           sleep ${{ github.event.inputs.live_time }}
-    
+
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
