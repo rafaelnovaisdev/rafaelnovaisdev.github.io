@@ -7,4 +7,4 @@ services:
     environment:
       - JEKYLL_ENV=production
     volumes:
-      - ./_site:/srv/jekyll/_site
+      - ./_site:/app/_site

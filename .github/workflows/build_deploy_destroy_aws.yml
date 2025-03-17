@@ -6,7 +6,7 @@ on:
       live_time:
         description: "Time in seconds to keep the infrastructure live before tearing down"
         required: false
-        default: "60"  # default to 60 seconds; you can change this
+        default: "60"  # default to 60 seconds; adjust as needed
 
 jobs:
   build:
@@ -41,31 +41,19 @@ jobs:
           echo "Site did not become available in time."
           exit 1
 
-          - name: Clean host _site directory
-          run: |
-            rm -rf _site
-            mkdir _site
+      - name: List _site contents
+        run: |
+          echo "Listing contents of the _site directory:"
+          ls -la _site
 
-      - name: Debug - List running containers
-        run: docker ps
-
-      # New step: Fix permissions inside the container so that all files in /app/_site are readable.
-      - name: Fix permissions in container
-        run: docker exec $(docker ps -q --filter "name=site") chmod -R a+r /app/_site
-
-      - name: Copy site files from container to host
-        run: docker cp $(docker ps -q --filter "name=site"):/app/_site/. ./_site
-
-      - name: Debug - List _site contents on host
-        run: ls -la _site
-
+      # With the volume mount in place, the container's build output is written to ./_site
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: site
           path: _site
-    
-      - name: Tear down
+
+      - name: Tear down containers
         run: docker-compose down
 
   deploy:
