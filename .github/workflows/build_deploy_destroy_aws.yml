@@ -45,7 +45,7 @@ jobs:
         run: docker ps
 
       - name: Copy site files from container to host
-        run: docker cp $(docker ps -q --filter "name=site"):/app/_site ./_site
+        run: docker cp $(docker ps -q --filter "name=site"):/app/_site/. ./_site
 
       - name: List _site contents on host
         run: ls -la _site
