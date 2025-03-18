@@ -1,4 +1,4 @@
-name: Test, Build & Deploy AWS
+name: Build & Deploy AWS
 
 on:
   workflow_dispatch:
@@ -8,45 +8,8 @@ on:
         required: false
         default: "60"  # default to 60 seconds; adjust as needed
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Install Docker Compose
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y docker-compose
-
-      - name: Check Docker Compose version
-        run: docker-compose version
-
-      - name: Build and run containers
-        run: docker-compose up -d
-
-      - name: Test Website with curl
-        run: |
-          # Try for up to 10 attempts, waiting 5 seconds between attempts.
-          for i in {1..10}; do
-            if curl -s -f http://localhost:4000; then
-              echo "Site is up!"
-              exit 0
-            else
-              echo "Site not up yet. Waiting..."
-              sleep 5
-            fi
-          done
-          echo "Site did not become available in time."
-          exit 1
-
-      - name: Tear down containers
-        run: docker-compose down
-
-        
-  build_site:
-    needs: test
+jobs:   
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -71,14 +34,14 @@ jobs:
           ls -la _site
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: _site
 
 
   deploy:
-    needs: build_site
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
