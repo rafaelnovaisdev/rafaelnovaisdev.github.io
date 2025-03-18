@@ -1,4 +1,4 @@
-name: Build & Deploy AWS
+name: Test, Build & Deploy AWS
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
         default: "60"  # default to 60 seconds; adjust as needed
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -41,23 +41,44 @@ jobs:
           echo "Site did not become available in time."
           exit 1
 
+      - name: Tear down containers
+        run: docker-compose down
+
+        
+  build_site:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+
+      - name: Install Dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build --destination _site
+
       - name: List _site contents
         run: |
           echo "Listing contents of the _site directory:"
-          ls -la 
+          ls -la _site
 
-      # With the volume mount in place, the container's build output is written to ./_site
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: site
           path: _site
 
-      - name: Tear down containers
-        run: docker-compose down
 
   deploy:
-    needs: build
+    needs: build_site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
