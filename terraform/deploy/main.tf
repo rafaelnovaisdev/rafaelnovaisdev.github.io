@@ -68,16 +68,19 @@ resource "aws_s3_bucket_public_access_block" "public_access" {
   restrict_public_buckets = false
 }
 
-# Set the ACL to Public-Read
-resource "aws_s3_bucket_acl" "site_bucket_acl" {
+# Bucket Ownership
+resource "aws_s3_bucket_ownership_controls" "ownership" {
   bucket = coalesce(
     try(aws_s3_bucket.site_bucket[0].id, ""),
     data.aws_s3_bucket.existing_bucket.id
   )
-  acl = "public-read"
+
+  rule {
+    object_ownership = "BucketOwnerEnforced"
+  }
 }
 
-# Public Read Policy for the Website Bucket
+# Keep using bucket policy instead of ACL
 resource "aws_s3_bucket_policy" "site_policy" {
   bucket = coalesce(
     try(aws_s3_bucket.site_bucket[0].id, ""),
