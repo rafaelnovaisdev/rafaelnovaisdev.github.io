@@ -80,8 +80,15 @@ jobs:
           name: site
 
       - name: Deploy Site to S3
-        run: aws s3 sync _site s3://rafaelnovaisdev-prod --delete
-
+        run: |
+          if [ -d "_site" ]; then
+            echo "Deploying site to S3..."
+            aws s3 sync _site s3://rafaelnovaisdev-prod --delete
+          else
+            echo "Error: The directory _site does not exist. Skipping deployment."
+            exit 1
+          fi
+  
       - name: Wait for specified live time
         run: |
           echo "Keeping infrastructure live for ${{ github.event.inputs.live_time }} seconds..."
