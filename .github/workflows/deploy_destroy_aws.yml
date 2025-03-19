@@ -81,7 +81,7 @@ jobs:
 
       - name: Deploy Site to S3
         run: |
-            if [ -d "." ]; then
+          if [ -d "_site" ]; then
             echo "Deploying site to S3..."
             aws s3 sync _site s3://rafaelnovaisdev-prod --delete
           else
