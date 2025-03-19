@@ -63,15 +63,15 @@ jobs:
           terraform_version: 1.11  # Pin a version if you like
 
       - name: Terraform Init
-        working-directory: terraform
+        working-directory: terraform/deploy
         run: terraform init
           
       - name: Terraform Plan
-        working-directory: terraform
+        working-directory: terraform/deploy
         run: terraform plan
 
       - name: Terraform Apply
-        working-directory: terraform
+        working-directory: terraform/deploy
         run: terraform apply -auto-approve
 
       - name: Download Build Artifact
