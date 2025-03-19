@@ -78,7 +78,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
+          path: ./site
 
+      - name: Show Artifact Contents (for debugging)
+        run: |
+          echo "Listing contents of the site artifact:"
+          ls -la site 
+          
       - name: Verify & Deploy Site to S3
         run: |
           if [ -d "_site" ]; then
