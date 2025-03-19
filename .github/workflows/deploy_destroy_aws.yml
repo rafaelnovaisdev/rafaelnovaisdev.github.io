@@ -79,13 +79,13 @@ jobs:
         with:
           name: site
 
-      - name: Deploy Site to S3
+      - name: Verify & Deploy Site to S3
         run: |
-          if [ -d "." ]; then
-            echo "Deploying site to S3..."
+          if [ -d "_site" ]; then
+            echo "Extracted artifact successfully. Deploying site to S3..."
             aws s3 sync _site s3://rafaelnovaisdev-prod --delete
           else
-            echo "Error: The directory _site does not exist. Skipping deployment."
+            echo "Error: The directory _site does not exist after extraction. Skipping deployment."
             exit 1
           fi
   
