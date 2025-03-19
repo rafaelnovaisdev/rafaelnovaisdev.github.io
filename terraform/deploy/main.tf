@@ -35,7 +35,7 @@ resource "aws_s3_bucket" "site_bucket" {
   bucket = var.bucket_name
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
