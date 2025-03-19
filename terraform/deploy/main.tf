@@ -8,11 +8,6 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = "us-east-1"
-}
-
-# Variables
 variable "aws_region" {
   description = "AWS Region where the bucket will be created."
   type        = string
@@ -23,6 +18,10 @@ variable "bucket_name" {
   description = "The name of the S3 bucket for your site. Must be globally unique."
   type        = string
   default     = "rafaelnovaisdev-prod"
+}
+
+provider "aws" {
+  region = var.aws_region
 }
 
 # Check if the bucket already exists in AWS
