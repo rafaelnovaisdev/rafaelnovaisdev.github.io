@@ -5,10 +5,10 @@ title: Curriculum Vitae
 personal_info:
   name: Rafael Novais
   role: Software Engineer
-  location: Portugal / WorldWide (Remote)
+  location: Portugal (& Remote)
   email: rafa@rafaelnovais.dev
   phone: (+351) 934 463 751
-  linkedin: https://www.linkedin.com/in/rafael-nov
+  linkedin: https://www.linkedin.com/in/rafaelnovaisdev
 
 introduction:
  - I'm a curious and detail-oriented engineer who thrives on understanding how things work under the hood. I'm looking for a role where I can grow my skills and apply my problem-solving mindset in a hands-on technical environment.
