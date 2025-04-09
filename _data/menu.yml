@@ -13,12 +13,12 @@ entries:
 
   - title: "<br>"
 
-  - title: "📂 <a href='projects'>projects</a>" 
-  - entries:
+  # - title: "📂 <a href='projects'>projects</a>" 
+  # - entries:
     # - title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
     # - title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
 
-  - title: "&#128214; <a href='archive.html'>blog</a>"
+  - title: "&#128214; <a href='blog'>blog</a>"
 
   - title: "🛠️ <a href='tools'>tools</a>"
 
