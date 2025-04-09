@@ -5,31 +5,20 @@
 
 
 entries:
-  - title: "🛠️ <a href='tools'>tools & links</a>"
-
-  - title: "🚀 projects"
-    entries:
-      - title: "..."
-    #   - title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
-    #   - title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
-
-  - title: "📓 blog"
-    post_list:
-      limit: 3
-      show_more: true
-      show_more_text: "See more posts..."
-      show_more_url: "archive.html"
-      category: "blog"
-
-
-
   # Links Section
-  - title: "📞 contacts"
-    entries:
+  - entries:
+      - title: "mail: <a href='mailto:rafa@rafaelnovais.dev'>rafa@rafaelnovais.dev</a>"
+      - title: "github: <a href='https://github.com/rafaelnovaisdev'>rafaelnovaisdev</a>"
+      - title: "linkedin: <a href='https://www.linkedin.com/in/rafaelnovaisdev/'>rafaelnovaisdev</a>"
 
-      - title: "<a href='mailto:rafa@rafaelnovais.dev'>rafa@rafaelnovais.dev</a>"
-      - title: "linkedin: <a href='https://www.linkedin.com/in/rafael-nov/'>rafael-nov</a>"
-      - title: "github: <a href='https://github.com/rafael-nov'>rafael-nov</a>"
+  - title: "<br>"
 
+  # - title: "📂 <a href='projects'>projects</a>" 
+  # - entries:
+    # - title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
+    # - title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
 
+  # - title: "&#128214; <a href='blog'>blog</a>"
+
+  - title: "🛠️ <a href='tools'>tools</a>"
 

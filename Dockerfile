@@ -31,7 +31,7 @@ COPY --chown=jekyll:jekyll . .
 EXPOSE 4000
 
 # Use ENTRYPOINT instead of CMD to start the Jekyll server
-ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
+ENTRYPOINT ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0","--incremental"]
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:4000 || exit 1
