@@ -45,7 +45,7 @@ education:
     period: September 2015 - September 2020
 
 skills:
-  - category: Programming Languages
+  - section: Programming Languages
     items:
       - name: Java
         level: 3
@@ -54,7 +54,7 @@ skills:
       - name: MATLAB
         level: 2
 
-  - category: Java Ecosystem
+  - section: Java Ecosystem
     items:
       - name: Java
         level: 3
