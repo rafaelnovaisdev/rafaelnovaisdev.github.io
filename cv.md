@@ -8,18 +8,16 @@ personal_info:
   location: Portugal (& Remote)
   email: rafa@rafaelnovais.dev
   phone: (+351) 934 463 751
-  linkedin: https://www.linkedin.com/in/rafaelnovaisdev
 
-introduction:
- - I'm a curious and detail-oriented engineer who thrives on understanding how things work under the hood. I'm looking for a role where I can grow my skills and apply my problem-solving mindset in a hands-on technical environment.
+# introduction:
+#  - I'm a curious and detail-oriented engineer who thrives on understanding how things work under the hood. I'm looking for a role where I can grow my skills and apply my problem-solving mindset in a hands-on technical environment.
 
 
 experience:
-
   - company: Continental Engineering Services
     role: Software Engineer (Automation & Tools)
-    period: September 2022 - February 2025
-    duration: 2 years 5 months
+    period: September 2022 - May 2025
+    duration: 2 years, 9 months
     responsibilities:
       - Support of CI processes like SiL, unit testing, and static code analysis.
       - Setup & maintain a Jenkins server.
@@ -43,11 +41,11 @@ experience:
       - Support position involved in monitoring, troubleshooting, triage, and follow-up of incidents in the production and user acceptance testing environments.
       - Ensuring day-to-day operations ran smoothly, fulfilling user requests, and carrying out routine operational tasks.
 
-education:
 
+education:
   - degree: Bachelor's degree in Computer Science
     school: Faculdade de Ciências da Universidade do Porto
-    period: 2015 - 2020
+    period: September 2015 - September 2020
 
 skills:
   - section: Scripting & Programming
