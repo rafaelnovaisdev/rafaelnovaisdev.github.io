@@ -45,29 +45,6 @@ education:
     period: September 2015 - September 2020
 
 skills:
-  - section: Programming Languages
-    items:
-      - name: Java
-        level: 3
-      - name: C
-        level: 2
-      - name: MATLAB
-        level: 2
-
-  - section: Java Ecosystem
-    items:
-      - name: Java
-        level: 3
-      - name: Maven
-        level: 1
-      - name: Gradle
-        level: 1
-
-  - section: Databases
-    items:
-      - name: SQL
-        level: 3
-
   - section: Development Tools
     items:
       - name: Git
@@ -108,9 +85,9 @@ skills:
   - section: Monitoring
     items:
       - name: Grafana
-        level: 3
+        level: 2
       - name: Prometheus
-        level: 3
+        level: 2
       - name: Nagios
         level: 2
 
@@ -132,6 +109,27 @@ skills:
       - name: Google Cloud Dataflow
         level: 2
       - name: Google Cloud Pub/Sub
+        level: 2
+
+  - section: Programming Languages
+    items:
+      - name: C
+        level: 2
+      - name: MATLAB
+        level: 2
+
+  - section: Java Ecosystem
+    items:
+      - name: Java
+        level: 3
+      - name: Maven
+        level: 1
+      - name: Gradle
+        level: 1
+
+  - section: Databases
+    items:
+      - name: SQL
         level: 2
 
 languages:
