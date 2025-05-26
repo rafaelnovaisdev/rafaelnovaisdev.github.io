@@ -5,11 +5,7 @@
 
 
 entries:
-  # Links Section
-  - entries:
-      - title: "mail: <a href='mailto:rafa@rafaelnovais.dev'>rafa@rafaelnovais.dev</a>"
-      - title: "github: <a href='https://github.com/rafaelnovaisdev'>rafaelnovaisdev</a>"
-      - title: "linkedin: <a href='https://www.linkedin.com/in/rafaelnovaisdev/'>rafaelnovaisdev</a>"
+
 
   - title: "<br>"
 
@@ -18,6 +14,12 @@ entries:
     # - title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
     # - title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
 
-  # - title: "&#128214; <a href='blog'>blog</a>"
+  - title: "&#128214; <a href='blog'>blog</a>"
 
   #- title: "🛠️ <a href='tools'>tools</a>"
+
+  # Links Section
+  - entries:
+      - title: "mail: <a href='mailto:rafa@rafaelnovais.dev'>rafa@rafaelnovais.dev</a>"
+      - title: "github: <a href='https://github.com/rafaelnovaisdev'>rafaelnovaisdev</a>"
+      - title: "linkedin: <a href='https://www.linkedin.com/in/rafaelnovaisdev/'>rafaelnovaisdev</a>"

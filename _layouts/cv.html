@@ -97,31 +97,7 @@ layout: default
   <button class="toggle-button">+</button>
   💻 Technical Skills
 </h2>
-<div id="skills-content" class="section-content">
-  <div id="mini-ranking-content">
-    <table style="width: 100%; font-size: small; border-collapse: collapse;">
-      <tr>
-        <td><span class="dot filled-1"></span></td>
-        <td><strong>1 - Novice:</strong> Basic understanding and limited experience.</td>
-      </tr>
-      <tr>
-        <td><span class="dot filled-2"></span></td>
-        <td><strong>2 - Beginner:</strong> Some experience and can perform tasks with guidance.</td>
-      </tr>
-      <tr>
-        <td><span class="dot filled-3"></span></td>
-        <td><strong>3 - Competent:</strong> Good working knowledge and can perform tasks independently.</td>
-      </tr>
-      <tr>
-        <td><span class="dot filled-4"></span></td>
-        <td><strong>4 - Proficient:</strong> Strong understanding and can mentor others.</td>
-      </tr>
-      <tr>
-        <td><span class="dot filled-5"></span></td>
-        <td><strong>5 - Expert:</strong> Deep expertise and recognized authority in the field.</td>
-      </tr>
-    </table>
-  </div>
+
   <div class="skills-container">
     {% for skill_section in page.skills %}
       <h3>{{ skill_section.section }}</h3>
@@ -138,6 +114,32 @@ layout: default
       {% endfor %}
     {% endfor %}
   </div>
+
+  <div id="skills-content" class="section-content">
+    <div id="mini-ranking-content">
+      <table style="width: 100%; font-size: small; border-collapse: collapse;">
+        <tr>
+          <td><span class="dot filled-1"></span></td>
+          <td><strong>1 - Novice:</strong> Basic understanding and limited experience.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-2"></span></td>
+          <td><strong>2 - Beginner:</strong> Some experience and can perform tasks with guidance.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-3"></span></td>
+          <td><strong>3 - Competent:</strong> Good working knowledge and can perform tasks independently.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-4"></span></td>
+          <td><strong>4 - Proficient:</strong> Strong understanding and can mentor others.</td>
+        </tr>
+        <tr>
+          <td><span class="dot filled-5"></span></td>
+          <td><strong>5 - Expert:</strong> Deep expertise and recognized authority in the field.</td>
+        </tr>
+      </table>
+    </div>
 </div>
 
 </div>
