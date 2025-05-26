@@ -5,13 +5,11 @@ title: Curriculum Vitae
 personal_info:
   name: Rafael Novais
   role: Software Engineer
-  location: Portugal (& Remote)
   email: rafa@rafaelnovais.dev
   phone: (+351) 934 463 751
 
 # introduction:
 #  - I'm a curious and detail-oriented engineer who thrives on understanding how things work under the hood. I'm looking for a role where I can grow my skills and apply my problem-solving mindset in a hands-on technical environment.
-
 
 experience:
   - company: Continental Engineering Services
@@ -41,67 +39,73 @@ experience:
       - Support position involved in monitoring, troubleshooting, triage, and follow-up of incidents in the production and user acceptance testing environments.
       - Ensuring day-to-day operations ran smoothly, fulfilling user requests, and carrying out routine operational tasks.
 
-
 education:
   - degree: Bachelor's degree in Computer Science
     school: Faculdade de Ciências da Universidade do Porto
     period: September 2015 - September 2020
 
 skills:
-  - section: Scripting & Programming
+  - category: Programming Languages
     items:
-      - name: Python
-        level: 4
-      - name: Bash
-        level: 3
-      - name: PowerShell
-        level: 3
       - name: Java
         level: 3
-      - name: C (Programming Language)
+      - name: C
         level: 2
       - name: MATLAB
         level: 2
 
-  - section: CI/CD
+  - category: Java Ecosystem
     items:
-      - name: Jenkins
-        level: 4
-      - name: GitHub
-        level: 3
-      - name: Git
+      - name: Java
         level: 3
       - name: Maven
         level: 1
       - name: Gradle
         level: 1
 
+  - section: Databases
+    items:
+      - name: SQL
+        level: 3
+
+  - section: Development Tools
+    items:
+      - name: Git
+        level: 3
+
+  - section: Scripting
+    items:
+      - name: Python
+        level: 3
+      - name: Bash
+        level: 3
+      - name: PowerShell
+        level: 3
+
+  - section: Operating Systems
+    items:
+      - name: Windows
+        level: 3
+      - name: Linux
+        level: 3
+      - name: Ubuntu
+        level: 3
+
+  - section: CI/CD
+    items:
+      - name: Jenkins
+        level: 3
+      - name: GitHub Actions
+        level: 2
+
   - section: Container Orchestration
     items:
       - name: Docker
         level: 2
       - name: Kubernetes
-        level: 2
-
-  - section: Operating Systems
-    items:
-      - name: Linux
-        level: 3
-      - name: Ubuntu
-        level: 3
-      - name: Windows
-        level: 3
-
-  - section: Infrastructure & Cloud
-    items:
-      - name: Amazon Web Services (AWS)
-        level: 2
-      - name: Google Cloud Platform (GCP)
-        level: 2
-      - name: Terraform
         level: 1
-        
-  - section: Monitoring & Logging
+
+  - section: Monitoring
     items:
       - name: Grafana
         level: 3
@@ -110,10 +114,19 @@ skills:
       - name: Nagios
         level: 2
 
-  - section: Databases
+  - section: Amazon Web Services (AWS)
     items:
-      - name: SQL
-        level: 3
+      - name: AWS CloudFormation
+        level: 2
+      - name: AWS Lambda
+        level: 2
+      - name: AWS S3
+        level: 2
+
+  - section: Google Cloud Platform (GCP)
+    items:
+      - name: Google Cloud Storage
+        level: 2
       - name: Google BigQuery
         level: 2
       - name: Google Cloud Dataflow
@@ -123,10 +136,10 @@ skills:
 
 languages:
   - name: Portuguese
-    level: Native
-  - name: English
     level: Full Professional
+  - name: English
+    level: Business Professional
   - name: Spanish
-    level: Limited Working
+    level: Basic
 
 ---
