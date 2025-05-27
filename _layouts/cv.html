@@ -28,8 +28,6 @@ layout: default
   </div>
 </div>
 
-
-
 <h2 onclick="toggleSection('career-content', event)">
   <button class="toggle-button">+</button>
   💼 Career
@@ -50,7 +48,6 @@ layout: default
   {% endfor %}
 </div>
 
-
 <h2 onclick="toggleSection('education-content', event)">
   <button class="toggle-button">+</button>
   🎓 Education
@@ -61,7 +58,7 @@ layout: default
 <div class="timeline-item">
     <h4>{{ edu.degree }}</h4>
     <p>{{ edu.school }}</p>
-    <div class="timeline-date">{{ edu.period }}</div>
+    <h5 class="timeline-date">{{ edu.period }}</h5>
     <div class="timeline-content">
 
     <ul>
@@ -74,30 +71,12 @@ layout: default
 {% endfor %}
 </div>
 
-
-<!-- Languages Section -->
-<h2 onclick="toggleSection('languages-content', event)">
-  <button class="toggle-button">+</button>
-  🌐 Languages
-</h2>
-<div id="languages-content" class="section-content">
-  <div class="languages-container">
-    {% for language in page.languages %}
-      <div class="language-item">
-        <div class="language-name">{{ language.name }}</div>
-        <div class="language-level">{{ language.level }}</div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
-
 <!-- Skills Section -->
 <h2 onclick="toggleSection('skills-content', event)">
   <button class="toggle-button">+</button>
   💻 Technical Skills
 </h2>
-
+<div id="skills-content" class="section-content">
   <div class="skills-container">
     {% for skill_section in page.skills %}
       <h3>{{ skill_section.section }}</h3>
@@ -113,9 +92,10 @@ layout: default
         </div>
       {% endfor %}
     {% endfor %}
-  </div>
 
-  <div id="skills-content" class="section-content">
+    <br />
+    <br />
+
     <div id="mini-ranking-content">
       <table style="width: 100%; font-size: small; border-collapse: collapse;">
         <tr>
@@ -140,8 +120,24 @@ layout: default
         </tr>
       </table>
     </div>
+  </div>
 </div>
 
+<!-- Languages Section -->
+<h2 onclick="toggleSection('languages-content', event)">
+  <button class="toggle-button">+</button>
+  🌐 Languages
+</h2>
+<div id="languages-content" class="section-content">
+  <div class="languages-container">
+    {% for language in page.languages %}
+      <div class="language-item">
+        <div class="language-name">{{ language.name }}</div>
+        <div class="language-level">{{ language.level }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
 </div>
 
 <style>
