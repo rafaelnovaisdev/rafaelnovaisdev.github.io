@@ -1,13 +1,43 @@
 ---
 layout: default
 ---
-<header>
+<header class="personal-info">
   <h1><a href="/">{{ site.title }}</a></h1>
+  <h2>{{ site.role }}</h2>
+
   {%-if site.theme_config.show_description-%}
     <p>{{ site.description }}</p>
   {%-endif-%}
 </header>
 
+
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
+
+
+<style>
+  /* Personal Information styling */
+  .personal-info {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .personal-info h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .personal-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #666;
+  }
+
+  .personal-info p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #999;
+  }
+</style>
+  
