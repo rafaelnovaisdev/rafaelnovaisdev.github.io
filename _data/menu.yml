@@ -1,9 +1,9 @@
 # For documentation on this file, see:
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
-# entries:
-#   - title: "📂 <a href='projects'>projects</a>" 
-#   - entries:
+entries:
+  # - title: "📂 <a href='projects'>projects</a>" 
+  # - entries:
     #- title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
     #- title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
 
