@@ -1,6 +1,9 @@
 title: rafaelnovais.dev # name of the site
 author: Rafael Novais # name of site's author
-email: email@rafaelnovais.dev # email of site's author
+role: Software Engineer
+location: Barcelos, Braga, Portugal
+
+email: rafa@rafaelnovais.dev # email of site's author
 url: https://rafaelnovais.dev # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 
@@ -9,7 +12,7 @@ favicon: "logo.png" # name+extension of favicon (which must be put on the root f
 # goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
 
 theme_config:
-  appearance: "auto" # can be "light", "dark" or "auto"
+  appearance: "light" # can be "light", "dark" or "auto"
   back_home_text: ".." # customize text for homepage link in post layout
   date_format: "%d-%m-%Y" # customize how date is formatted
   show_description: false # show blog description in home page

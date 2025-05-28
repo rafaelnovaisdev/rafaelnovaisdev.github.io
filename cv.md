@@ -14,7 +14,7 @@ personal_info:
 experience:
   - company: Continental Engineering Services
     role: Software Engineer (Automation & Tools)
-    period: September 2022 - May 2025
+    period: september 2022 - may 2025
     duration: 2 years, 9 months
     responsibilities:
       - Support of CI processes like SiL, unit testing, and static code analysis.
@@ -25,24 +25,26 @@ experience:
 
   - company: Accenture Portugal
     role: Software Engineer (Big Data)
-    period: June 2021 - March 2022
+    period: june 2021 - march 2022
     duration: 10 months
     responsibilities:
       - Developing ETL pipelines, SQL queries, application features, and incident investigation.
 
   - company: Euronext
     role: Service Operations Analyst
-    period: September 2019 - March 2020
+    period: september 2019 - march 2020
     duration: 7 months
     location: Porto e Região, Portugal
     responsibilities:
-      - Support position involved in monitoring, troubleshooting, triage, and follow-up of incidents in the production and user acceptance testing environments.
-      - Ensuring day-to-day operations ran smoothly, fulfilling user requests, and carrying out routine operational tasks.
+      - L1 Support position involved in monitoring, troubleshooting, triage, and follow-up of incidents.
+      - Ensure day-to-day operations ran smoothly in the production and user acceptance testing environments.
+      - Fulfilling user requests.
+      - Carrying out routine operational tasks.
 
 education:
-  - degree: Bachelor's degree in Computer Science
-    school: Faculdade de Ciências da Universidade do Porto
-    period: September 2015 - September 2020
+  - degree: Computer Science, Bachelor's degree
+    school: FCUP - Faculdade de Ciências da Universidade do Porto
+    period: (september 2015 - september 2020) (5 years)
 
 skills:
   - section: Development Tools
@@ -73,23 +75,34 @@ skills:
       - name: Jenkins
         level: 3
       - name: GitHub Actions
-        level: 2
+        level: 3
 
   - section: Container Orchestration
     items:
       - name: Docker
-        level: 2
+        level: 3
       - name: Kubernetes
         level: 1
 
   - section: Monitoring
     items:
       - name: Grafana
-        level: 2
+        level: 3
       - name: Prometheus
-        level: 2
+        level: 3
       - name: Nagios
-        level: 2
+        level: 3
+
+  - section: Google Cloud Platform (GCP)
+    items:
+      - name: Google Cloud Storage
+        level: 3
+      - name: Google BigQuery
+        level: 3
+      - name: Google Cloud Dataflow
+        level: 3
+      - name: Google Cloud Pub/Sub
+        level: 3
 
   - section: Amazon Web Services (AWS)
     items:
@@ -98,17 +111,6 @@ skills:
       - name: AWS Lambda
         level: 2
       - name: AWS S3
-        level: 2
-
-  - section: Google Cloud Platform (GCP)
-    items:
-      - name: Google Cloud Storage
-        level: 2
-      - name: Google BigQuery
-        level: 2
-      - name: Google Cloud Dataflow
-        level: 2
-      - name: Google Cloud Pub/Sub
         level: 2
 
   - section: Programming Languages
@@ -123,14 +125,23 @@ skills:
       - name: Java
         level: 3
       - name: Maven
-        level: 1
+        level: 2
       - name: Gradle
+        level: 2
+
+  - section: Python Ecosystem
+    items:
+      - name: Python
+        level: 3
+      - name: PyQt
+        level: 3
+      - name: Flask
         level: 1
 
   - section: Databases
     items:
       - name: SQL
-        level: 2
+        level: 3
 
 languages:
   - name: Portuguese

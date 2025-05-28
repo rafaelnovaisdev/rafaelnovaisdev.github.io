@@ -4,22 +4,24 @@ layout: default
 
 {%-include back_link.html-%}
 
+<header class="personal-info">
+  <h1><a href="/">{{ site.title }}</a></h1>
+  <h2>{{ site.role }}</h2>
+  <p>{{ site.location }}</p>
+
+  {%-if site.theme_config.show_description-%}
+    <p>{{ site.description }}</p>
+  {%-endif-%}
+</header>
+
+
 <div class="cv-container">
-
 <!-- Personal Information Section -->
-<div class="personal-info">
-  <h1>{{ page.personal_info.name }}</h1>
-  <h2>{{ page.personal_info.role }}</h2>
-  <p>{{ page.personal_info.location }}</p>
-  <br>
-  <p><a href="mailto:{{ page.personal_info.email }}" target="_blank">{{ page.personal_info.email }}</a></p>
-</div>
-
 <!-- Introduction Section -->
 <div class="introduction" onclick="toggleSection('introduction-content', event)">
   <h2>
     <button class="toggle-button">+</button>
-    👋 Hello
+    👋 Hi
   </h2>
   <div id="introduction-content" class="section-content" style="display: block;">
     {% for intro_item in page.introduction %}
@@ -28,11 +30,9 @@ layout: default
   </div>
 </div>
 
-
-
 <h2 onclick="toggleSection('career-content', event)">
   <button class="toggle-button">+</button>
-  💼 Career
+  🧙‍♂️ Hats
 </h2>
 <div id="career-content" class="section-content">
   {% for job in page.experience %}
@@ -50,18 +50,17 @@ layout: default
   {% endfor %}
 </div>
 
-
 <h2 onclick="toggleSection('education-content', event)">
   <button class="toggle-button">+</button>
-  🎓 Education
+  🎓 School
 </h2>  
-<!-- Education Section -->
+<!-- School Section -->
 <div id="education-content" class="section-content">
 {% for edu in page.education %}
 <div class="timeline-item">
     <h4>{{ edu.degree }}</h4>
     <p>{{ edu.school }}</p>
-    <div class="timeline-date">{{ edu.period }}</div>
+    <h5 class="timeline-date">{{ edu.period }}</h5>
     <div class="timeline-content">
 
     <ul>
@@ -74,30 +73,12 @@ layout: default
 {% endfor %}
 </div>
 
-
-<!-- Languages Section -->
-<h2 onclick="toggleSection('languages-content', event)">
-  <button class="toggle-button">+</button>
-  🌐 Languages
-</h2>
-<div id="languages-content" class="section-content">
-  <div class="languages-container">
-    {% for language in page.languages %}
-      <div class="language-item">
-        <div class="language-name">{{ language.name }}</div>
-        <div class="language-level">{{ language.level }}</div>
-      </div>
-    {% endfor %}
-  </div>
-</div>
-
-
 <!-- Skills Section -->
 <h2 onclick="toggleSection('skills-content', event)">
   <button class="toggle-button">+</button>
-  💻 Technical Skills
+  💻 Skills
 </h2>
-
+<div id="skills-content" class="section-content">
   <div class="skills-container">
     {% for skill_section in page.skills %}
       <h3>{{ skill_section.section }}</h3>
@@ -113,11 +94,12 @@ layout: default
         </div>
       {% endfor %}
     {% endfor %}
-  </div>
 
-  <div id="skills-content" class="section-content">
+    <br />
+    <br />
+
     <div id="mini-ranking-content">
-      <table style="width: 100%; font-size: small; border-collapse: collapse;">
+      <table style="width: 100%; font-size: medium; border-collapse: collapse;">
         <tr>
           <td><span class="dot filled-1"></span></td>
           <td><strong>1 - Novice:</strong> Basic understanding and limited experience.</td>
@@ -140,8 +122,24 @@ layout: default
         </tr>
       </table>
     </div>
+  </div>
 </div>
 
+<!-- Languages Section -->
+<h2 onclick="toggleSection('languages-content', event)">
+  <button class="toggle-button">+</button>
+  🌐 Languages
+</h2>
+<div id="languages-content" class="section-content">
+  <div class="languages-container">
+    {% for language in page.languages %}
+      <div class="language-item">
+        <div class="language-name">{{ language.name }}</div>
+        <div class="language-level">{{ language.level }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
 </div>
 
 <style>
