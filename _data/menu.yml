@@ -1,13 +1,13 @@
 # For documentation on this file, see:
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
-entries:
-  - title: "📂 <a href='projects'>projects</a>" 
-  - entries:
+# entries:
+#   - title: "📂 <a href='projects'>projects</a>" 
+#   - entries:
     #- title: "freelance solo business: <a href='https://rcelo-software.com/'>rcelo-software.com</a>"
     #- title: "learning brand: <a href='https://herois-do-mar.com'>herois-do-mar.com</a>"
 
-  - title: "<br>"
+#  - title: "<br>"
 
   - title: "&#128214; <a href='blog'>blog</a>"
     post_list:
@@ -23,7 +23,7 @@ entries:
 
   - title: "<br>"
 
-  - title: "🗪 links"
+  - title: "ℹ️"
   - entries:
       - title: "mail: <a href='mailto:rafa@rafaelnovais.dev'>rafa@rafaelnovais.dev</a>"
       - title: "linkedin: <a href='https://www.linkedin.com/in/rafaelnovaisdev/'>rafaelnovaisdev</a>"
