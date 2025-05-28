@@ -19,12 +19,5 @@ entries:
 
   - title: "<br>"
   
-  #- title: "💼 <a href='cv'>cv</a>"
-
-  - title: "<br>"
-
-  - title: "links"
-  - entries:
-      - title: "mail: <a href='mailto:rafa@rafaelnovais.dev'>rafa@rafaelnovais.dev</a>"
-      - title: "linkedin: <a href='https://www.linkedin.com/in/rafaelnovaisdev/'>rafaelnovaisdev</a>"
-      - title: "github: <a href='https://github.com/rafaelnovaisdev'>rafaelnovaisdev</a>"
+  # - title: "💼 <a href='cv'>cv</a>"
+  # - title: "💼 <a href='psa'>personal skill assessment</a>"

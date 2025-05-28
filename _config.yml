@@ -4,6 +4,8 @@ role: Software Engineer
 location: Barcelos, Braga, Portugal
 
 email: rafa@rafaelnovais.dev # email of site's author
+linkedin_url: https://www.linkedin.com/in/rafaelnovaisdev/ # LinkedIn profile URL
+github_url: https://github.com/rafaelnovaisdev # GitHub profile URL
 url: https://rafaelnovais.dev # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 
