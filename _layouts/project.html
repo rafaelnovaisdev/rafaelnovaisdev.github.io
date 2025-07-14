@@ -1,0 +1,166 @@
+---
+layout: default
+---
+
+{% include back_link.html %}
+
+<article class="project-article">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.github_url %}
+    <div class="github-button-container">
+      <a href="{{ page.github_url }}" class="github-button" target="_blank" rel="noopener noreferrer">
+        View on GitHub
+      </a>
+    </div>
+    {% endif %}
+
+    <div class="project-meta">
+      <div class="meta-grid">
+        {% if page.status %}
+        <div class="meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value">{{ page.status }}</span>
+        </div>
+        {% endif %}
+
+        {% if page.start_date %}
+        <div class="meta-item">
+          <span class="meta-label">Started</span>
+          <span class="meta-value">{{ page.start_date | date: "%B %d, %Y" }}</span>
+        </div>
+        {% endif %}
+        
+        {% if page.last_updated %}
+        <div class="meta-item">
+          <span class="meta-label">Updated</span>
+          <span class="meta-value">{{ page.last_updated | date: "%B %d, %Y" }}</span>
+        </div>
+        {% endif %}
+        
+        {% if page.tech_stack and page.tech_stack.size > 0 %}
+        <div class="meta-item full-width">
+          <span class="meta-label">Tech Stack</span>
+          <div class="tech-tags">
+            {% for tech in page.tech_stack %}
+              <span class="tech-tag">{{ tech }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="project-content">
+    {{ content }}
+  </div>
+</article>
+
+<style>
+  .project-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .github-button-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .github-button {
+    display: inline-block;
+    color: #ffffff;
+    background: #2da44e;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(27, 31, 36, 0.15);
+    text-align: center;
+    min-width: 140px;
+    box-shadow: 0 1px 0 rgba(27, 31, 36, 0.1), inset 0 -1px 0 rgba(27, 31, 36, 0.1);
+    letter-spacing: 0.01em;
+  }
+  
+  .github-button:hover {
+    background: #2c974b;
+    transform: translateY(-1px);
+    box-shadow: 0 1px 0 rgba(27, 31, 36, 0.1), 0 1px 3px rgba(27, 31, 36, 0.2);
+  }
+  
+  .github-button:active {
+    background: #298e46;
+    box-shadow: inset 0 1px 0 rgba(27, 31, 36, 0.1);
+    transform: translateY(0);
+  }
+  
+  .project-meta {
+    margin: 1.5rem 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem 1.5rem;
+  }
+  
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .meta-item.full-width {
+    grid-column: 1 / -1;
+    margin-top: 0.25rem;
+  }
+  
+  .meta-label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 500;
+  }
+  
+  .meta-value {
+    font-size: 0.95rem;
+    color: #343a40;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+  
+  .tech-tag {
+    background: #e9ecef;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #495057;
+    border: 1px solid #dee2e6;
+  }
+  
+  @media (max-width: 768px) {
+    .meta-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .meta-item {
+      gap: 0.2rem;
+    }
+    
+    .github-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>

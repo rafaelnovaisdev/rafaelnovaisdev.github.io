@@ -1,21 +1,40 @@
 title: rafaelnovais.dev # name of the site
 author: Rafael Novais # name of site's author
-role: Software Engineer
-location: Barcelos, Braga, Portugal
 
 email: rafa@rafaelnovais.dev # email of site's author
 linkedin_url: https://www.linkedin.com/in/rafaelnovaisdev/ # LinkedIn profile URL
 github_url: https://github.com/rafaelnovaisdev # GitHub profile URL
 url: https://rafaelnovais.dev # root address of the site
-baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
+baseurl: "" # subpath of the site
 
+favicon: "favicon.ico" # name+extension of favicon (which must be put on the root folder)
 
-favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
-# goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+    sort_by: project_number
+    sort_order: descending
 
+# Defaults
+defaults:
+  - scope:
+      path: "_projects"
+      type: "projects"
+    values:
+      layout: "project"
+      category: "project"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+
+# Theme configuration
 theme_config:
   appearance: "light" # can be "light", "dark" or "auto"
-  back_home_text: ".." # customize text for homepage link in post layout
+  back_home_text: "&lt; back" # customize text for homepage link in post layout
   date_format: "%d-%m-%Y" # customize how date is formatted
   show_description: false # show blog description in home page
   lowercase_titles: true # show titles in lowercase in lists

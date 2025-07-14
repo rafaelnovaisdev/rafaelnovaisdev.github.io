@@ -1,4 +1,7 @@
 ---
-layout: projects
-title: projects
+layout: page
+title: Projects
+permalink: /projects/
 ---
+
+{%-include project_list.html-%}

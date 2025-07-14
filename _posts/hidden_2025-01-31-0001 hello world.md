@@ -1,11 +1,11 @@
 ---
 layout: post
 category: blog
+title: "Hello World 🌍"
+date: 2025-01-31
 ---
 
-# Hello World! 🌍  
-
-Welcome to **rafaelnovais.dev**.
+Welcome to **rafaelnovais.dev**
 
 ## How I Built This 🚀  
 
@@ -16,3 +16,6 @@ This website was set up using:
 - **Namecheap** for a custom dns domain  
 - **Zoho Mail** for email hosting (<rafa@rafaelnovais.dev>)
 - **Cursor IDE** and its AI models for coding, content, UI, and more  
+
+---
+
