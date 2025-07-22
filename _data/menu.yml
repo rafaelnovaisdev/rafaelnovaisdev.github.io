@@ -1,25 +1,18 @@
-# For documentation on this file, see:
-# https://github.com/riggraz/no-style-please#customize-the-menu
-
-entries:
-  - title: "🏗️ <a href='projects'>projects</a>"
-    project_list:
-      category: project
-      limit: 1
-      show_more: true
-      show_more_text: "See all projects"
-      show_more_url: "/projects"
-
-  - title: "<br>"
-
-  - title: "&#128214; <a href='blog'>blog</a>"
-    post_list:
-      category: blog
-      limit: 5
-      show_more: true
-      show_more_text: "See all blog posts"
-      show_more_url: "/blog"
-
-  - title: "<br>"
-  
-  # - title: "💼 <a href='cv'>cv</a>"
+# entries:
+#  - title: "🏗️ <a href='projects'>projects</a>"
+#  project_list:
+#      category: project
+#      limit: 1
+#      show_more: true
+#      show_more_text: "See all projects"
+#      show_more_url: "/projects"
+#   - title: "<br>"
+# - title: "&#128214; <a href='blog'>blog</a>"
+# post_list:
+#   category: blog
+#   limit: 5
+#   show_more: true
+#   show_more_text: "See all blog posts"
+#   show_more_url: "/blog"
+# - title: "<br>"
+# - title: "💼 <a href='cv'>cv</a>"
